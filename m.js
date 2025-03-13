@@ -44,9 +44,10 @@ dishes. Try to add 5 or 6 elements.
 
 
 //task 1
+//updated to reflect assignment requirement of uppercase
 let fav = ["Tokyo", "London", "Paris", "New York", "Hollywood"];
 fav.forEach((word) => {
-   console.log(word); 
+   console.log(word.toUpperCase()); 
 });
 /*outputs Tokyo
 London
@@ -56,11 +57,13 @@ Hollywood*/
 
 //task 2
 //I cannot get this to run
-/*let numbers = [1, 2, 3, 4, 5];
-let  square = numbers.map(numbers);
+//update, solved issue by removing semicolon and adjusting callback
+
+let numbers = [1, 2, 3, 4, 5]
+let square = numbers.map(num => num * num);
 
 console.log(square);
-*/
+
 
 //task 3
 
@@ -75,8 +78,11 @@ console.log(bigScores);
 //[85, 90, 100]
 
 //task 4
+//updated to add console.log for findIndex per assignment tasks
 
 favoriteFood = ["cheese sandwich", "bread sandwich", "pickle sandwich", "sandwich sandwich", "toast sandwich"];
 let fourLetterFood = favoriteFood.find((moreThanFour) => moreThanFour.length > 4);
+let fourIndex = favoriteFood.findIndex(food => food.length > 4);
 
 console.log(fourLetterFood);
+console.log(fourIndex);
